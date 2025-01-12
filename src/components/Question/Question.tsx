@@ -40,7 +40,10 @@ export function Question({ question, description, id }: QuestionProps) {
   return (
     <>
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-semibold text-primary" id={tagId}>
+        <h2
+          className="text-lg lg:text-2xl font-semibold text-primary"
+          id={tagId}
+        >
           {question}
         </h2>
         <ButtonIcon

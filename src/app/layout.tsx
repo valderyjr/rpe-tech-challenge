@@ -27,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} antialiased flex`}>
+      <body
+        className={`${inter.className} antialiased flex flex-col lg:flex-row`}
+      >
         <Suspense>
           <Sidebar items={sidebarMenuItems} />
         </Suspense>
