@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { HomePageUI } from "./homePageUI";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Página Inicial",
@@ -22,7 +23,9 @@ export default function Home() {
           height={112}
         />
       </div>
-      <HomePageUI />
+      <Suspense>
+        <HomePageUI />
+      </Suspense>
     </div>
   );
 }

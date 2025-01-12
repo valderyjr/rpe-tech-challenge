@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { formattedQuestions } from "@/data/questions";
+import { Suspense } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.className} antialiased flex`}>
-        <Sidebar items={sidebarMenuItems} />
+        <Suspense>
+          <Sidebar items={sidebarMenuItems} />
+        </Suspense>
         <main className="p-4 flex-1">{children}</main>
       </body>
     </html>
