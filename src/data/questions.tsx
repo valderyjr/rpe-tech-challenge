@@ -1,3 +1,13 @@
+import {
+  CodeQualityAndTesting,
+  CollaborationAndMentoring,
+  DesignAndUx,
+  FrontEndArchitecture,
+  IntegrationWithBackend,
+  MaintenanceAndEvolution,
+  NewTechnologies,
+  PerformanceAndScalability,
+} from "@/components/Answers/Answers";
 import { getQuestionHref } from "@/utils/get-question-href";
 
 export const questions = [
@@ -54,4 +64,32 @@ export const questions = [
 export const formattedQuestions = questions.map((question) => ({
   ...question,
   href: getQuestionHref(question.id),
+}));
+
+const getAnswerComponentById = (id: string) => {
+  switch (id) {
+    case "arquitetura-front-end":
+      return <FrontEndArchitecture />;
+    case "escalabilidade-e-desempenho":
+      return <PerformanceAndScalability />;
+    case "manutencao-evolucao-projetos":
+      return <MaintenanceAndEvolution />;
+    case "integracao-api":
+      return <IntegrationWithBackend />;
+    case "desgin-ux":
+      return <DesignAndUx />;
+    case "testes-qualidade-codigo":
+      return <CodeQualityAndTesting />;
+    case "novas-tecnologias":
+      return <NewTechnologies />;
+    case "colaboracao-mentoria":
+      return <CollaborationAndMentoring />;
+    default:
+      return null;
+  }
+};
+
+export const questionsWithAnswers = questions.map((question) => ({
+  ...question,
+  answer: getAnswerComponentById(question.id),
 }));

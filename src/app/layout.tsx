@@ -33,7 +33,7 @@ export default function RootLayout({
         <Suspense>
           <Sidebar items={sidebarMenuItems} />
         </Suspense>
-        <main className="p-4 flex-1">{children}</main>
+        <main className="p-4 flex-1 max-w-screen-xl">{children}</main>
       </body>
     </html>
   );

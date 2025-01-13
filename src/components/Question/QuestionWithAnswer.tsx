@@ -1,21 +1,22 @@
 "use client";
 
-import { useRef } from "react";
+import { PropsWithChildren, useRef } from "react";
 import { Question } from "./Question";
 import { cn } from "@/utils/cn";
 
-type QuestionWithAnswerProps = {
+type QuestionWithAnswerProps = PropsWithChildren<{
   question: string;
   description: string;
   isSelected?: boolean;
   id: string;
-};
+}>;
 
 export function QuestionWithAnswer({
   question,
   description,
   isSelected,
   id,
+  children,
 }: QuestionWithAnswerProps) {
   const ref = useRef<HTMLDivElement>(null);
   return (
@@ -29,9 +30,7 @@ export function QuestionWithAnswer({
       )}
     >
       <Question question={question} description={description} id={id} />
-      <div className="mt-4">
-        {/* <h3 className="text-xl font-semibold mb-2 text-primary">Resposta:</h3> */}
-      </div>
+      <div className="mt-4">{children}</div>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 "use client";
 
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 import { getQuestionId } from "@/utils/get-question-id";
+import { LuChevronDown, LuChevronUp } from "react-icons/lu";
 
 type QuestionProps = {
   question: string;
@@ -51,7 +51,7 @@ export function Question({ question, description, id }: QuestionProps) {
           variant="secondary"
           ariaLabel={isExpanded ? "Recolher descrição" : "Expandir descrição"}
         >
-          {isExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          {isExpanded ? <LuChevronUp size={24} /> : <LuChevronDown size={24} />}
         </ButtonIcon>
       </div>
       <div

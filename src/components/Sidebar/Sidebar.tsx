@@ -3,13 +3,13 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { FullSidebarItem, SidebarMenu } from "./SidebarMenu";
 import { useRef, useState } from "react";
-import { MenuIcon, X } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import { getSelectedQuestion } from "@/utils/get-selected-question";
 import { getQuestionId } from "@/utils/get-question-id";
 import { getQuestionHref } from "@/utils/get-question-href";
+import { LuMenu, LuX } from "react-icons/lu";
 
 type SidebarProps = {
   items: FullSidebarItem[];
@@ -80,7 +80,7 @@ export function Sidebar({ items }: SidebarProps) {
             isSidebarOpen && "opacity-0"
           )}
         >
-          <MenuIcon size={24} />
+          <LuMenu size={24} />
         </ButtonIcon>
       </div>
       <div
@@ -105,7 +105,7 @@ export function Sidebar({ items }: SidebarProps) {
           isSidebarOpen ? "left-72" : "-left-10"
         )}
       >
-        <X size={24} />
+        <LuX size={24} />
       </ButtonIcon>
     </>
   );

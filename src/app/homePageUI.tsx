@@ -1,7 +1,7 @@
 "use client";
 
 import { QuestionWithAnswer } from "@/components/Question/QuestionWithAnswer";
-import { questions } from "@/data/questions";
+import { questionsWithAnswers } from "@/data/questions";
 import { getQuestionHref } from "@/utils/get-question-href";
 import { getQuestionId } from "@/utils/get-question-id";
 import { getSelectedQuestion } from "@/utils/get-selected-question";
@@ -40,14 +40,16 @@ export function HomePageUI() {
 
   return (
     <ul className="space-y-8">
-      {questions.map((question) => (
+      {questionsWithAnswers.map((question) => (
         <li key={`question-${question.id}`}>
           <QuestionWithAnswer
             description={question.description}
             isSelected={selectedQuestionId === question.id}
             question={question.question}
             id={question.id}
-          />
+          >
+            {question.answer}
+          </QuestionWithAnswer>
         </li>
       ))}
     </ul>
