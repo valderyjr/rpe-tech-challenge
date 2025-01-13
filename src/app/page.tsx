@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { HomePageUI } from "./homePageUI";
+import { HomePageUI } from "../components/HomePageUI/HomePageUI";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
