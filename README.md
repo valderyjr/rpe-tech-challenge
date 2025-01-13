@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RPE Tech Front-End Challenge
 
-## Getting Started
+Este projeto foi desenvolvido como parte do desafio para a vaga de Desenvolvedor Front-End na **RPE Tech**.
 
-First, run the development server:
+## Objetivo do Desafio
+
+O desafio consiste em responder 8 perguntas que avaliam:
+
+- A capacidade de analisar criticamente cenários.
+- Tomar decisões técnicas eficazes.
+- Comunicar adequadamente escolhas e direcionamentos relacionados ao projeto e à implementação de aplicações front-end.
+
+Para apresentar as respostas de forma organizada e interativa, criei um site funcional que pode ser acessado em:  
+**[rpe-tech-challenge.vercel.app](https://rpe-tech-challenge.vercel.app/)**
+
+---
+
+## Tecnologias Utilizadas
+
+- **React** com **Next.js**: Para criação do front-end moderno e otimizado.
+- **TailwindCSS**: Para estilização rápida, flexível e responsiva.
+- **TypeScript**: Para garantir maior segurança e robustez no desenvolvimento.
+- **Vercel**: Utilizada para realizar o deploy contínuo com integração ao GitHub
+- **NPM**: Gerenciador de pacotes utilizado
+
+---
+
+## Estrutura do Projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── README.md
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public # Pasta que contém os assets utilizados
+├── src
+│   ├── app # App Folder do NextJS
+│   │   ├── favicon.ico # Favicon da aplicação
+│   │   ├── globals.css # Arquivo de configurações globais do CSS
+│   │   ├── layout.tsx # Layout global da aplicação
+│   │   └── page.tsx # Página principal (/)
+│   ├── components # Pasta com os componentes utilizados na aplicação
+│   ├── data # Pasta com dados estáticos. Nesse caso, as questões
+│   ├── hooks # Pasta para hooks customizados.
+│   └── utils # Pasta para funções utilitárias
+├── tailwind.config.ts # Configuração do TailwindCSS
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Executar Localmente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Se desejar executar o projeto localmente, siga os passos abaixo:
 
-## Learn More
+1. Clone este repositório:
+   ```bash
+   git clone git@github.com:valderyjr/rpe-tech-challenge.git
+   ```
+2. Acesse o diretório do projeto:
+   ```bash
+   cd rpe-tech-challenge
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Acesse o projeto no navegador:
+   ```
+   http://localhost:3000
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Imagem da aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<img src="./docs/rpe-tech-challenge.png" alt="Tela principal da aplicação"/>
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Considerações Finais
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O site foi projetado como uma forma de demonstrar minha capacidade de desenvolver aplicações front-end modernas, bem como para apresentar minhas decisões técnicas de forma clara. Caso tenha dúvidas ou sugestões, estou à disposição!
